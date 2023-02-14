@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/contactus.css" />
+
+    <script src="./js/contactus.js"></script>
+    <title>MyDentalClinic</title>
+    
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <nav class="nav_checkbox">
+          <a href="#" class="logo"
+            ><img src="./Photos/icon_tooth.jpeg" alt="MyDentalClinic" />
+            <h2>MyDentalClinic</h2></a
+          >
+          <input type="checkbox" id="tab-nav" class="tab-nav" />
+          <label for="tab-nav" class="label">
+            <div class="burger"></div>
+            <div class="burger"></div>
+            <div class="burger"></div>
+          </label>
+          <ul class="content_nav">
+            <li><a href="./index.html">HOME</a></li>
+            <li><a href="#">CONTACT US</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <section class="content_section">
+      <div class="formatting">
+        <div></div>
+        <div class="temp">
+          <h1>Book Your Slot Now</h1>
+          <form
+            action="#"
+            id="form"
+            onsubmit="return validateForm()"
+            name="form"
+          >
+            <div class="form-group">
+              <input type="text" placeholder="Enter name" name="name" />
+              <p id="name_validation">*This field cannot be empty</p>
+              <select name="gender" id="gender" form="form">
+                <option value="choose">Choose Gender</option>
+                <option value="m">Male</option>
+                <option value="f">Female</option>
+              </select>
+              <p id="gender_validation">*Choose gender</p>
+              <select name="services" id="services" form="form">
+                <option value="services">Choose services</option>
+                <option value="Cavity Filling">Cavity Filling</option>
+                <option value="Ceramic Braces">Ceramic Braces</option>
+                <option value="Dental Bridge">Dental Bridge</option>
+                <option value="Missing Teeth">Missing Teeth</option>
+                <option value="Root Canal">Root Canal</option>
+              </select>
+              <p id="services_validation">*Choose service</p>
+              <input type="date" placeholder="Appointment Date" name="date" />
+              <p id="date_validation">*This field cannot be empty</p>
+              <input
+                type="text"
+                placeholder="Enter phone"
+                name="phone"
+                oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');"
+              />
+              <p id="phone_validation">*Should contain 10 digits</p>
+            </div>
+            <!-- <button class="btn">Submit</button> -->
+            <input type="submit" class="btn" value="submit" />
+          </form>
+        </div>
+      </div>
+    </section>
+    <footer class="footer">
+      <div class="footer_item">
+        <p>Address:134 Block XYZ,Hauz khas,New Delhi-110016</p>
+        <a href="./index.html">Home</a>
+      </div>
+      <div class="footer_item">
+        <p>Phone:9876543210</p>
+        <p>Email:abc@gmail.com</p>
+      </div>
+    </footer>
+  </body>
+</html>
